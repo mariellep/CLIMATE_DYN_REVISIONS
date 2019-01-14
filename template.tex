@@ -256,16 +256,13 @@ and areas with $\widetilde{V^*}\geq 1$ are considered blocked.
 \subsection{Quantification of agreement between methods}\label{simsec}
 
 Three metrics are used for quantifying agreement between methods: 
-pattern correlation between the seasonally-averaged blocking patterns, probability of co-occurrence, and block spatial similarity. Pattern correlation has a range of possible values from -1 to 1, with negative values signifying that a decrease in one variable corresponds to an increase in the other variable. The other two metrics have a range of possible values from 0 to 1, with 1 implying the maximum amount of agreement. We utilized multiple methods in order to separate out seasonally averaged versus instantaneous agreement; pattern correlation is useful for assessing the blocking climatology, but similarity and probability metrics provide further insight into the agreement between methods with regards to individual blocks. The quantification of probability and similarity serve similar purposes, but inevitably are different metrics for comparing detection algorithms. Two methods could have a high probability of co-occurrence if they consistently detect the same features, but a lesser value of similarity if the resultant clusters produced by the two methods are very different in size and shape.
+pattern correlation between the seasonally-averaged blocking patterns, probability of co-occurrence, and block spatial similarity.  We utilized multiple methods in order to separate out seasonally averaged versus instantaneous agreement; pattern correlation is useful for assessing the blocking climatology, but similarity and probability metrics provide further insight into the agreement between methods with regards to individual blocks. The quantification of probability and similarity serve similar purposes, but inevitably are different metrics for comparing detection algorithms. Two methods could have a high probability of co-occurrence if they consistently detect the same features, but a lesser value of similarity if the resultant clusters produced by the two methods are very different in size and shape.
 
-\paragraph{Pearson pattern correlation:} This metric, denoted by $C(M1,M2)$, measures the strength of linear relationships between  frequency values at corresponding coordinates for methods $M1$ and $M2$. Higher correlation is seen when patterns are more similar, regardless of the relative magnitudes of the two data points. Values 0.3 and below are considered weak, and strong at 0.7 and above. Centered pattern correlation is computed using the NCL \texttt{pattern\_cor} function with cosine latitude weighting.
+\paragraph{Pearson pattern correlation:} This metric, denoted by $C(M1,M2)$, measures the strength of linear relationships between  frequency values at corresponding coordinates for methods $M1$ and $M2$. Higher correlation is seen when patterns are more similar, regardless of the relative magnitudes of the two data points. Pattern correlation has a range of possible values from -1 to 1, in which magnitudes of 0.3 and below are considered weak, and strong at 0.7 and above. Negative values indicate an inverse relationship between $M1$ and $M2$. Centered pattern correlation is computed using the NCL \texttt{pattern\_cor} function with cosine latitude weighting.
 
 \paragraph{Probability of co-occurrence:} This metric, denoted by $P(M1|M2)$, quantifies the likelihood that a block will be detected by method $M1$, given that method $M2$ also detects it. The methodology for calculating probability of co-occurrence can be found in Appendix \ref{probcalc}. 
 
 \paragraph{Spatial similarity:} This metric, denoted by $S(M1,M2)$, quantifies the match between areas designated as part of a block by methods $M1$ and $M2$. $S$ is the intersection divided by the union of the two areas. Since $S$ varies for each block, an interquartile range will be presented in the results. The methodology for calculating spatial similarity can be found in Appendix \ref{simcalc}. 
-
-
-
 
 
 \section{Evaluation and intercomparison of atmospheric block metrics}\label{results}
@@ -325,7 +322,7 @@ Results for each of the methods are presented in Figures \ref{duration}-\ref{siz
 
 \paragraph{Block duration:} These results fall within the range of previously presented values (averages of about 6-8 days), such as results from \citealt{wiedenmann_climatology_2002}. The 5-day minimum threshold provides a lower bound to the range of possible 25th percentile values, but the upper bound is quite variable per method, as seen in Figure \ref{duration}. 
 
-Overall, the $PV^*$ method has distributions of duration values with the smallest magnitudes; on average, the difference in median values between $PV^*$ and other methods was -1.34 (with $p<<0.01$). This is partly an artifact of the size threshold, as $PV^*$ detected regions tend to be smaller and therefore tend to meet the minimum size requirement less often. The relationship between $AGP$ and $Z^*$ is less consistent, although $Z^*$ tends to have larger extreme values and to display significant differences with $PV^*$ duration values more often than with $AGP$ values. The high $AGP$ duration values, particularly in the SH, are often associated with low-latitude blocks; the high $Z^*$ duration values do not have the same relationship with latitude.
+Overall, the $PV^*$ method has distributions of duration values with the smallest magnitudes; on average, the difference in median values between $PV^*$ and other methods was -1.34 (with $p<<0.01$). This is partly an artifact of the size threshold, as $PV^*$ detected regions tend to be smaller and therefore meet the minimum size requirement less often. The relationship between $AGP$ and $Z^*$ is less consistent, although $Z^*$ tends to have larger extreme values and to display significant differences with $PV^*$ duration values more often than with $AGP$ values. The high $AGP$ duration values, particularly in the SH, are often associated with low-latitude blocks; the high $Z^*$ duration values do not have the same relationship with latitude.
 %The range of duration values for $Z^*$ varied more than the other methods, with shorter-lived $Z^*$ blocks (about 6-8 days) in NH summer and the longest-lived $Z^*$ blocks (up to almost 15 days) in SH winter. The SH winter blocks detected by $Z^*$ had some of the largest overall duration values. In contrast to $Z^*$, $AGP$ blocks were overall less persistent in the SH (5.5 to 9.25 days) compared to the NH (5.75 to 11.5 days). The high $AGP$ duration values in NH summer were mainly due to low-latitude blocks. The $PV^*$ detected blocks tended towards shorter durations overall (5.5 to 9.5 days), which is partly an artifact of the size threshold, but the range of values were more consistent across seasons and hemispheres.
 
 
@@ -838,6 +835,60 @@ S(C_k) = \frac{\sum\limits_{n=1}^{P_k}\left(v_n-1\right)\cos(\phi)_n}{\sum\limit
 where $P_k$ is the number of points in $C_k$, $v_n$ is the value of the gridpoint (either 1 or 2), and $cos(\phi)_n$ is the cosine of that gridpoint's latitude value. 
 
 Summing the cosine latitude values of gridpoints, rather than the number of points in $C_k$, addresses point 2, as $\cos(\phi)_n$ is smaller at higher latitudes (thus approximating the smaller area between gridpoints). The numerator is essentially the intersection of blocked points ($M1\cap M2$); the sum will only include $\cos(\phi)_n$ where $v_n=2$ (since $v_n=1$ means that $\cos(\phi)_n$ is multiplied by 0). The denominator is the union ($M1\cup M2$), where all $\cos(\phi)_n$ are included in the sum. 
+
+\section{Significance testing}\label{signifappendix}
+The quantities in Section \ref{results} are considered to be statistically significant if $p<0.05$ (and highly significant if $p<<0.01$), which implies that the quantity does not satisfy the null hypothesis. The following sections explain the methods used to establish significance, outlining the null hypothesis and the methodology used to calculate the p-values in Section \ref{results}.
+
+\subsection{Permutation test}
+The permutation test is a nonparametric method of hypothesis testing similar to bootstrapping (but without replacement). A sampling distribution is constructed by resampling and/or shuffling data, thus avoiding assumption of a known sampling distribution (for example, a normal distribution). 
+
+The general methodology is as follows:
+\begin{enumerate}
+    \item Calculate the reference statistic $R$ (correlation, difference of medians) between the two datasets $V1$ and $V2$
+    \item Construct the sample distribution $D$ by repeating the following 10000 times:
+    \begin{enumerate}
+        \item Generate samples $S1$ and $S2$ (specifics in subsequent subsections)
+        \item Repeat the calculation of $R$ using $S1$ and $S2$ to generate sample statistic $\widetilde{R}$
+    \end{enumerate}
+    \item Count the number of times, $n_D$, in $D$ where $\widetilde{R}$ is more extreme than $R$: \begin{eqnarray}
+n_D =  
+\begin{cases}
+    \text{number of } \widetilde{R}\geq R,& \text{if } R>D_{50}\\
+     \text{number of }\widetilde{R}\leq R             & \text{otherwise}
+\end{cases}
+\end{eqnarray}
+where $D_{50}$ representing the 50th percentile of $D$ and $n_D$ representing the number of instances in $D$ which satisfy the appropriate case. 
+\end{enumerate}
+
+The p-value is calculated as \begin{equation}
+    p=\frac{n_D}{10000}
+\end{equation}
+
+\subsubsection{Blocking duration, zonal distance traveled, size, speed (Section \ref{blockingmetrics})}
+\textit{Null hypothesis:} Distributions $V1$ and $V2$ are approximately the same; therefore, if $V1$ and $V2$ are pooled and two new distributions $S1$ and $S2$ are drawn from that common pool, the difference in medians $M(S1,S2)$ should be similar to $M(V1,V2)$.
+
+\noindent\textit{Alternate hypothesis:} $V1$ and $V2$ are different enough that $M(V1,V2)$ will differ significantly from $M(S1,S2)$
+
+\noindent\textit{Sampling method:}
+\begin{enumerate}
+     \item Combine all values from $V1$ and $V2$ into common pool $P$
+    \item Draw new samples $S1$ (same length as $V1$) and $S2$ (same length as $V2$) from $P$ without replacement and calculate $M(S1,S2)$
+\end{enumerate}
+
+
+\subsubsection{Pattern correlation (Section \ref{intercompare})}
+\textit{Null hypothesis:} For fields $F1$ and $F2$, correlation $C(F1,F2)$ will not change significantly if one of the grids is shuffled (implying that the correlation value would be similar if the pattern was entirely random).
+
+\noindent\textit{Alternate hypothesis:} $C(F1,F2)$ is a result of this particular arrangement of frequency values in each of the two grids being compared.
+
+\noindent\textit{Sampling method:}\begin{enumerate}
+    \item Generate a list of 1000 random array indices $i$
+        \item Create two array subsamples, $S1=F1[i]$ and $S2=F2[i]$
+        \item Shuffle the order of $S2$ to create $\widehat{S2}$ and calculate $C(S1,\widehat{S2})$
+\end{enumerate}
+
+
+
 
 \end{appendices}
 

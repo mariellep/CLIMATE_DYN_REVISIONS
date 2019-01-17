@@ -84,7 +84,7 @@
 \maketitle
 
 \begin{abstract}
-Objective methods for identifying and quantifying atmospheric blocking have been developed over recent decades, primarily targeting North Atlantic blocks. Differences arise from these methods, leading to changes in the resultant blocking climatology. To understand these differences, and better inform future assessments built on quantitative detection of blocks, this paper examines blocking properties produced by three different objective detection algorithms over the global extratropics.  Blocking criteria examined include 500 hPa geopotential height anomaly ($Z^*$), column-averaged potential vorticity anomaly ($PV^*$), and 500 hPa geopotential height gradient ($AGP$). Results are analyzed for blocking climatologies and for instantaneous blocking patterns, as well as distributions of block size, speed, duration, and distance traveled. The results emphasize physical characteristics of the flow field and the subsequent blocking regions that emerge; overall, $PV^*$ and $Z^*$ blocked regions often have higher pattern correlation and spatial similarity, {\color{blue}though agreement with $AGP$ can be large in some instances.}
+Objective methods for identifying and quantifying atmospheric blocking have been developed over recent decades, primarily targeting North Atlantic blocks. Differences arise from these methods, leading to changes in the resultant blocking climatology. To understand these differences, and better inform future assessments built on quantitative detection of blocks, this paper examines blocking properties produced by three different objective detection algorithms over the global extratropics.  Blocking criteria examined include 500 hPa geopotential height anomaly ($Z^*$), column-averaged potential vorticity anomaly ($PV^*$), and 500 hPa geopotential height gradient ($AGP$). Results are analyzed for blocking climatologies and for instantaneous blocking patterns, as well as distributions of block size, speed, duration, and distance traveled. The results emphasize physical characteristics of the flow field and the subsequent blocking regions that emerge; overall, $PV^*$ and $Z^*$ blocked regions often have higher pattern correlation and spatial similarity, {\color{blue} though these two methods also display high agreement with $AGP$ in some instances.}
 {\color{teal}\sout{R2: unclear}}
 {\color{blue}$Z^*$ finds the largest (and greatest number of) blocked regions, while $PV^*$-detected regions are smallest in the Northern and $AGP$-detected regions are smallest in the Southern Hemisphere}
 {\color{teal}\sout{R2: unclear}}
@@ -197,7 +197,7 @@ GHGS=\frac{Z500(\phi_0)-Z500(\phi_s)}{\phi_0-\phi_s}
 \noindent
 where $\phi_0$, $\phi_n$, and $\phi_s$ are the reference latitude and the latitudes 20$^\circ$ above and below $\phi_0$, respectively, and $GHGN$ and $GHGS$ are the height gradients. For $GHGN<-10$ m/deg lat and $GHGS>0$ m/deg lat, the point is considered instantaneously blocked; the negative $GHGN$ and positive $GHGS$ values imply a large-scale high in the 500 hPa geopotential height field.
 
-TM90 performed these calculations about a single reference latitude band (60$^\circ$N), and \cite{barnes_methodology_2012} performed these calculations about a varying central latitude. The TM90 algorithm was modified by \cite{scherrer_two-dimensional_2006} to extend analysis to latitudes 35-75$^\circ$N and define $\phi_n$ and $\phi_s$ as 15$^\circ$ away from $\phi_0$; we further extend the analysis to 25$^\circ$ in both hemispheres. Furthermore, to apply this method in the SH, it is necessary to switch the criteria and signs for the two gradients, since  the orientation of ridges is flipped and the SH latitudes are negative. Therefore, in $AGP$, $GHGN<0$ m/deg lat and $GHGS>10$ m/deg lat in the SH. 
+TM90 performed these calculations about a single reference latitude band (60$^\circ$N){\color{blue}, and \cite{barnes_methodology_2012} performed these calculations about a varying central latitude.} The TM90 algorithm was modified by \cite{scherrer_two-dimensional_2006} to extend analysis to latitudes 35-75$^\circ$N and define $\phi_n$ and $\phi_s$ as 15$^\circ$ away from $\phi_0${\color{blue}; we further extend the analysis to 25$^\circ$ in both hemispheres.} Furthermore, to apply this method in the SH, it is necessary to switch the criteria and signs for the two gradients, since  the orientation of ridges is flipped and the SH latitudes are negative. Therefore, in $AGP$, $GHGN<0$ m/deg lat and $GHGS>10$ m/deg lat in the SH. 
 
 In TM90, a blocking episode is defined as a region of blocked flow that extends over at least 12 degrees longitude for a minimum of 4 days. This satisfies the second and third points of the AMS definition (meridional flow and anticyclonic circulation); however, the fact that this method is based on total fields means that it does not necessarily satisfy the first point (obstruction of normal flow), since there is no reference to the mean climatology. 
 
@@ -219,7 +219,7 @@ S04 proposes a blocking detection method which entails searching for regions of 
 
 \subsubsection{Modifications to anomaly methods}\label{modanom}
 
-For the purposes of global intercomparison, a few minor modifications are needed for the anomaly-based detection methods. Since DG83 and S04 use different definitions of climatological means and thresholds, it is necessary to redefine these quantities using a consistent methodology rather than those of the original algorithms. Also, as DG83 and S04 were initially developed using data from NA DJF, their hardcoded thresholds are not directly applicable in other sectors.{\color{teal}R2: Please also discuss briefly what this choice of threshold means for applying these indices in multi-model intercomparisons/evaluations of blocking, and for estimating blocking trends.} 
+For the purposes of global intercomparison, a few minor modifications are needed for the anomaly-based detection methods. Since DG83 and S04 use different definitions of climatological means and thresholds, it is necessary to redefine these quantities using a consistent methodology rather than those of the original algorithms. Also, as DG83 and S04 were initially developed using data from NA DJF, their hardcoded thresholds are not directly applicable in other sectors.{\color{blue} Such pre-determined thresholds also may have less applicability in multi-model simulations of future climate, where the base climatology has shifted such that 100 m or 1.2 PVU is no longer as extreme an anomaly value; this can lead }{\color{teal}R2: Please also discuss briefly what this choice of threshold means for applying these indices in multi-model intercomparisons/evaluations of blocking, and for estimating blocking trends.} 
 For a unified global study such as this one, a constant threshold definition will lead to either under- or over-detection of blocks in other regions because the anomaly thresholds are calibrated to the climatology of that region and time period. Here we follow \cite{barriopedro_application_2010} and \cite{dunn-sigouin_evaluation_2012}, who address this problem by replacing the constant threshold definition with one derived from the standard deviation of anomaly values. 
 
 \paragraph{Long term daily mean and anomalies:}  For this study, mean fields are computed for each of the 365 days in a year (excluding leap days) across 26 years. The values on these 365 days are Fourier transformed and only the first 6 harmonics {\color{blue}(0-5, with 0 corresponding to the mean and 5 corresponding to a 73 day span, or slightly less than a season)\sout{, including the mean, }}are used to back transform and obtain the long term daily mean (LTDM, denoted here as $\overline{V}$, the average of instantaneous variable $V$). This procedure is further explained in \cite{grotjahn_synoptic_2017}; it serves to smooth out the mean, which can otherwise have excessive day-to-day variations. 
@@ -258,7 +258,7 @@ and areas with $\widetilde{V^*}\geq 1$ are considered blocked.
 Three metrics are used for quantifying agreement between methods: 
 pattern correlation between the seasonally-averaged blocking patterns, probability of co-occurrence, and block spatial similarity.  We utilized multiple methods in order to separate out seasonally averaged versus instantaneous agreement; pattern correlation is useful for assessing the blocking climatology, but similarity and probability metrics provide further insight into the agreement between methods with regards to individual blocks. The quantification of probability and similarity serve similar purposes, but inevitably are different metrics for comparing detection algorithms. Two methods could have a high probability of co-occurrence if they consistently detect the same features, but a lesser value of similarity if the resultant clusters produced by the two methods are very different in size and shape.
 
-\paragraph{Pearson pattern correlation:} This metric, denoted by $C(M1,M2)$, measures the strength of linear relationships between  frequency values at corresponding coordinates for methods $M1$ and $M2$. Higher correlation is seen when patterns are more similar, regardless of the relative magnitudes of the two data points. Pattern correlation has a range of possible values from -1 to 1, in which magnitudes of 0.3 and below are considered weak, and strong at 0.7 and above. Negative values indicate an inverse relationship between $M1$ and $M2$. Centered pattern correlation is computed using the NCL \texttt{pattern\_cor} function with cosine latitude weighting.
+\paragraph{Pearson pattern correlation:} This metric, denoted by $C(M1,M2)$, measures the strength of linear relationships between  frequency values at corresponding coordinates for methods $M1$ and $M2$. Higher correlation is seen when patterns are more similar, regardless of the relative magnitudes of the two data points.{ \color{blue}Pattern correlation has a range of possible values from -1 to 1, in which magnitudes of 0.3 and below are considered weak, and strong at 0.7 and above. Negative values indicate an inverse relationship between $M1$ and $M2$.} Centered pattern correlation is computed using the NCL \texttt{pattern\_cor} function with cosine latitude weighting.
 
 \paragraph{Probability of co-occurrence:} This metric, denoted by $P(M1|M2)$, quantifies the likelihood that a block will be detected by method $M1$, given that method $M2$ also detects it. The methodology for calculating probability of co-occurrence can be found in Appendix \ref{probcalc}. 
 
@@ -267,13 +267,13 @@ pattern correlation between the seasonally-averaged blocking patterns, probabili
 
 \section{Evaluation and intercomparison of atmospheric block metrics}\label{results}
 
-We begin with a single case study, to highlight the importance of selecting a method, then present results for the entire ERA-Interim period in subsequent sections. The ERA-Interim results for JJA and DJF are presented as follows. First, each algorithm is assessed in terms of its individual statistics (averaged blocking climatology, block duration, size, distance traveled, and zonal speed measurements). Agreement between detection methods (in terms of both averaged and instantaneous detection of blocks) is also assessed. 
-%{\color{teal}R2: Put this information (also) in the table captions. But see next comment as well.}
+We begin with a single case study, to highlight the importance of selecting a method, then present results for the entire ERA-Interim period in subsequent sections. The full ERA-Interim results for JJA and DJF are presented as follows. First, each algorithm is assessed in terms of its individual statistics (averaged blocking climatology, block duration, size, distance traveled, and zonal speed measurements). Agreement between detection methods (in terms of both averaged and instantaneous detection of blocks) is also assessed. 
+{\color{teal}R2: Put this information (also) in the table captions. But see next comment as well.}
 These metrics demonstrate that agreement in blocking frequency does not imply consistency in the character of individual blocks.  Namely, one needs to be careful when drawing conclusions based on the blocking climatology alone, since there may be significant differences in the meteorological character of individual blocks.  Further, these results are indicative that conclusions drawn with one blocking detection scheme may not hold when another algorithm is used.
 
 \subsection{Case study: The Ridiculously Resilient Ridge}\label{rrrsec}
 
-%{\color{teal}R2: This is at the discretion of the authors, but could it be advantageous to discuss the case study at the start of the paper, thereby introducing many concepts, and making the paper easier to understand overall?}
+{\color{teal}R2: This is at the discretion of the authors, but could it be advantageous to discuss the case study at the start of the paper, thereby introducing many concepts, and making the paper easier to understand overall?}
 
 %To highlight the importance of selecting a method that will ``correctly'' identify desired features, 
 We present a case study of a persistent and pronounced ridge pattern that repeatedly appeared off the western coast of North America in late 2013, then reoccurred during the winters of 2014-2015 and 2015-2016. This feature, dubbed the ``Ridiculously Resilient Ridge'' (or RRR for short) by \cite{swain_extraordinary_2014}, was responsible for redirecting moisture-heavy air northwards during the winter months. Because California receives the bulk of its precipitation from December to March, the RRR was a key player in the drought that devastated the state for almost 6 years. 
@@ -285,7 +285,7 @@ We present a case study of a persistent and pronounced ridge pattern that repeat
 \hline
 Method pair & Correlation & Probability & Similarity \\
 \hline
-\multirow{2}{*}{$PV^*$ and $AGP$} & \multirow{2}{*}{-0.01} & $P(PV^*|AGP)$: 0.32 & \multirow{2}{*}{0.11 to 0.48} \\
+\multirow{2}{*}{$PV^*$ and $AGP$} & \multirow{2}{*}{-0.01} & $P(PV^*|AGP)$: 0.32 & \multirow{2}{*}{\textit{0.11} to 0.48} \\
 & & $P(AGP | PV^*)$: {0.40 }& \\
 & & & \\
 \multirow{2}{*}{$Z^*$ and $AGP$} & \multirow{2}{*}{0.06*} & $P(Z^*|AGP)$: \textbf{0.78} & \multirow{2}{*}{0.23 to 0.47} \\
@@ -308,12 +308,12 @@ If the goal is to detect a ridge configuration similar to that of the RRR, then 
 
 \subsection{Blocking climatology by algorithm}\label{blockingclim}
 
-Figure \ref{blockdens} compares seasonal blocking frequency obtained from applying the three detection methods to the full ERA-Interim reanalysis dataset from 1979-2018. Section \ref{intercompare} quantifies the amount of agreement between each of the methods, but it is obvious just from viewing the frequency plots that, even using the same time and size thresholds, these algorithms do not agree on the definition of blocking. Each of the three algorithms produce distinct regional and seasonal differences in their overall global blocking climatologies. $Z^*$ is the least discriminating, detecting blocks over the entire extent of each study region (particularly in the winter hemispheres), with maxima of about 19\% (18 days per season); in contrast, $AGP$ appears more optimized for the NH than the SH, as it detects scarcely any blocks in the SH midlatitudes, but has distinct maxima of almost 40\% (37 days) at the lower latitudes in the summer hemispheres.  $PV^*$ has maxima that are similar in location to $Z^*$ maxima, but the lowest overall magnitudes of blocking frequency (maximum values of $\approx 9\%$, or 8 days per season). 
+Figure \ref{blockdens} compares seasonal blocking frequency obtained from applying the three detection methods to the full ERA-Interim reanalysis dataset from 1979-2018. Section \ref{intercompare} quantifies the amount of agreement between each of the methods, but it is obvious just from viewing the frequency plots that, even using the same time and size thresholds, these algorithms do not agree on the definition of blocking. Each of the three algorithms produce distinct regional and seasonal differences in their overall global blocking climatologies. $Z^*$ is the least discriminating, detecting blocks over the entire extent of each study region (particularly in the winter hemispheres), with maxima of about 19\% (18 days per season); in contrast, $AGP$ appears more optimized for the NH than the SH, as it detects scarcely any blocks in the SH midlatitudes with the exception of SP, but has distinct maxima of almost 40\% (37 days) at the lower latitudes in the summer hemispheres.  $PV^*$ has maxima that are similar in location to $Z^*$ maxima, but the lowest overall magnitudes of blocking frequency (maximum values of $\approx 9\%$, or 8 days per season). 
 
 
 These differences are analogous to results reported in previous blocking studies. Certain maxima seen in Figure \ref{blockdens} are also present in other studies, i.e. the maxima that are centered over Scandinavia and the Aleutian Islands in the NH (\citealt{croci-maspoli_multifaceted_2007}, using S04; \citealt{dunn-sigouin_evaluation_2012}, using a hybrid of TM90 and DG83; \citealt{cheung_revisiting_2013}, using TM90); and in the SH, the maximum centered in SP (\citealt{wiedenmann_climatology_2002}, using TM90; \citealt{parsons_assessment_2016}, using DG83). The results between papers diverge in terms of the blocking frequency magnitude and the overall extent of blocking, but one could reasonably assume that this was in part due to differences in methodology (choice of variable, anomaly threshold, 1D vs 2D, extent of study region). Here, despite attempts to standardize the detection methodology as much as possible, the three objective detection methods still display differences in magnitude and extent. 
 
-One of the most notable differences between methods is seen in the lower latitudes. The 2D blocking indices utilized here select certain blocking patterns that are typically missed by the 1D indices of \cite{tibaldi_operational_1990} and others, because  1D methods only identify blocks in the vicinity of a central latitude. Low-latitude blocks are the most obvious example of features that are missed by the 1D methods, and the largest blocking frequencies are all at the lower latitudes. These features will be discussed in further detail in Section \ref{lowlatsec}; while they tend to be less stationary than other blocking features, they still impair the zonal flow as per the AMS definition and are therefore worth including in the results. $AGP$ detects a high percentage of low-latitude blocks in the summer hemispheres (maximum frequency of $\approx 40\%$, or 37 days per season), as well as in the winter hemispheres to a lesser extent. The summer low-latitude blocks are not detected by the anomaly methods because deviation from the mean accounts for seasonally high values of their respective variables, but $AGP$ has no reference to the mean climatology. However, the anomaly methods do detect low-latitude blocks in winter (particularly in NP DJF), due to seasonally low values of the LTDM.
+One of the most notable differences between methods is seen in the lower latitudes. The 2D blocking indices utilized here select certain blocking patterns that are typically missed by the 1D indices of \cite{tibaldi_operational_1990} and others, because  1D methods only identify blocks in the vicinity of a central latitude. Low-latitude blocks are the most obvious example of features that are missed by the 1D methods, and the largest blocking frequencies are all at the lower latitudes. These features will be discussed in further detail in Section \ref{lowlatsec}; while they tend to be less stationary than other blocking features, they still impair the zonal flow as per the AMS definition and are therefore worth including in the results. $AGP$ detects a high percentage of low-latitude blocks in the summer hemispheres (maximum frequency of $\approx 40\%$, or 37 days per season), as well as in the winter hemispheres to a lesser extent. The summer low-latitude blocks are rarely detected by the anomaly methods because deviation from the mean accounts for seasonally high values of their respective variables, but $AGP$ has no reference to the mean climatology. However, the anomaly methods do detect low-latitude blocks in winter (particularly in NP DJF), due to seasonally low values of the LTDM.
 
 
 \subsection{Blocking duration, zonal distance traveled, speed, size}\label{blockingmetrics}
@@ -322,7 +322,7 @@ One of the most notable differences between methods is seen in the lower latitud
 
 This section addresses differences in the block duration, zonal distance traveled, zonal block speed, and block size that emerge from each detection scheme (calculation methods for each of these items is briefly explained in Appendix \ref{stitchdesc}).  It should be noted that all of these characteristics are somewhat intertwined with one another. Smaller detected regions often correlate with shorter durations due to the size constraint, and block speed, being a function of distance and duration, will be skewed by relatively high or low values of either. 
 
-Results for each of the methods are presented in Figures \ref{duration}-\ref{size}, with the summer season values of the respective hemisphere on the top row and the winter season values on the bottom row. Statistical significance was established by using permutation, as explained in Appendix \ref{signifappendix}.
+{\color{blue}Results for each of the methods are presented in Figures \ref{duration}-\ref{size}, with the summer season values of the respective hemisphere on the top row and the winter season values on the bottom row. Statistical significance was established by using permutation, as explained in Appendix \ref{signifappendix}.}
 %Results for each of the methods are fairly similar among the regions in each hemisphere, and so are presented per hemisphere and season.  In each of the tables in this section, the summer season appears in the top row for each hemisphere, and values are given as an interquartile range (25th to 75th percentiles). The smallest (largest) value for the 25th and 75th percentile values in each row is italicized (bolded) in order to more easily visualize which methods have consistently higher or lower values of a given characteristic.
 
 {\color{teal} R2: Table 3 onward: The statistical significance of these results (of differences between AGP, Z*, and PV*) needs to be established throughout.}
@@ -357,8 +357,8 @@ Results for each of the methods are presented in Figures \ref{duration}-\ref{siz
 
 \paragraph{Block duration:} These results fall within the range of previously presented values (averages of about 6-8 days), such as results from \citealt{wiedenmann_climatology_2002}. The 5-day minimum threshold provides a lower bound to the range of possible 25th percentile values, but the upper bound is quite variable per method, as seen in Figure \ref{duration}. 
 
-Overall, the $PV^*$ method has distributions of duration values with the smallest magnitudes; on average, the difference in median values between $PV^*$ and other methods was -1.34 (with $p<<0.01$). This is partly an artifact of the size threshold, as $PV^*$ detected regions tend to be smaller and therefore meet the minimum size requirement less often. The relationship between $AGP$ and $Z^*$ is less consistent, although $Z^*$ tends to have larger extreme values and to display significant differences with $PV^*$ duration values more often than with $AGP$ values. The high $AGP$ duration values, particularly in the SH, are often associated with low-latitude blocks; the high $Z^*$ duration values do not have the same relationship with latitude.
-%The range of duration values for $Z^*$ varied more than the other methods, with shorter-lived $Z^*$ blocks (about 6-8 days) in NH summer and the longest-lived $Z^*$ blocks (up to almost 15 days) in SH winter. The SH winter blocks detected by $Z^*$ had some of the largest overall duration values. In contrast to $Z^*$, $AGP$ blocks were overall less persistent in the SH (5.5 to 9.25 days) compared to the NH (5.75 to 11.5 days). The high $AGP$ duration values in NH summer were mainly due to low-latitude blocks. The $PV^*$ detected blocks tended towards shorter durations overall (5.5 to 9.5 days), which is partly an artifact of the size threshold, but the range of values were more consistent across seasons and hemispheres.
+{\color{blue}Overall, the $PV^*$ method has distributions of duration values with the smallest magnitudes; on average, the difference in median values between $PV^*$ and other methods was -1.34 (with $p<<0.01$). This is partly an artifact of the size threshold, as $PV^*$-detected regions tend to be smaller and therefore meet the minimum size requirement less often. The relationship between $AGP$ and $Z^*$ is less consistent, although $Z^*$ tends to have larger extreme values and to display significant differences with $PV^*$ duration values more often than with $AGP$ values. The high $AGP$ duration values, particularly in the SH, are often associated with low-latitude blocks; the high $Z^*$ duration values do not have the same relationship with latitude.}
+%The range of duration values for $Z^*$ varied more than the other methods, with shorter-lived $Z^*$ blocks (about 6-8 days) in NH summer and the longest-lived $Z^*$ blocks (up to almost 15 days) in SH winter. The SH winter blocks detected by $Z^*$ had some of the largest overall duration values. In contrast to $Z^*$, $AGP$ blocks were overall less persistent in the SH (5.5 to 9.25 days) compared to the NH (5.75 to 11.5 days). The high $AGP$ duration values in NH summer were mainly due to low-latitude blocks. The $PV^*$-detected blocks tended towards shorter durations overall (5.5 to 9.5 days), which is partly an artifact of the size threshold, but the range of values were more consistent across seasons and hemispheres.
 
 
 \begin{figure}
@@ -387,11 +387,11 @@ Overall, the $PV^*$ method has distributions of duration values with the smalles
 
 % \end{table}
  
-\paragraph{Block zonal distance traveled:} As most previous blocking studies determine blocking on a per-gridpoint basis, it is difficult to draw direct comparisons to results here. Figure \ref{dist} shows that regions detected by $PV^*$ tend to travel longer distances in the zonal direction, despite having shorter duration values; statistically significant ($p<<0.01$) differences in median values between $PV^*$ and other methods are in the 500-1500 km range. With the exception of NH summer, there is a fairly consistent trend in which $PV^*>Z^*>ZGP$ in terms of the distribution means, although the differences in the overall distributions are not always significant. For the $AGP$ method, a larger proportion of cases with distance values greater than 2000 km ($\approx$ 24 degrees longitude) are associated with low-latitude blocking than the other methods; 68\% (232 out of 341 cases) of $AGP$ blocks with distance values greater than 2000 km were detected equatorward of 40 degrees, compared to 4\% (29 out of 696 cases) for $PV^*$ and 28\% (153 out of 758 cases) for $Z^*$. In general, interquartile ranges of SH distance values are greater than interquartile ranges of NH distance values.
+\paragraph{Block zonal distance traveled:} As most previous blocking studies determine blocking on a per-gridpoint basis, it is difficult to draw direct comparisons to results here. {\color{blue} Figure \ref{dist} shows that regions detected by $PV^*$ tend to travel longer distances in the zonal direction (particularly in winter), despite having shorter duration values; statistically significant ($p<<0.01$) differences in median values between $PV^*$ and other methods are in the 500-1500 km range. With the exception of NH summer (where there is no significant difference between $PV$ and $AGP$), there is a fairly consistent trend in which $PV^*>Z^*>AGP$ in terms of the distribution means, although the differences in the overall distributions are not always significant. For the $AGP$ method, a larger proportion of cases with distance values greater than 2000 km ($\approx$ 24 degrees longitude) are associated with low-latitude blocking than the other methods; 68\% (232 out of 341 cases) of $AGP$ blocks with distance values greater than 2000 km were detected equatorward of 40 degrees, compared to 4\% (29 out of 696 cases) for $PV^*$ and 28\% (153 out of 758 cases) for $Z^*$. In general, interquartile ranges of SH distance values are greater than interquartile ranges of NH distance values.}
 
 
 
-%Table \ref{dist} shows that, with the exception of NH summer, $AGP$ detected regions move the least zonal distance over time; regions detected by $Z^*$ have a range of values that is up to 50\% higher than the $AGP$ values and $PV^*$ values are greater still (up to twice as large as the values of the $AGP$ interquartile ranges), despite smaller  interquartile ranges for duration. The large values in NH summer for $AGP$ can be somewhat attributed to low-latitude blocks; 38\% of $AGP$-detected regions that are equatorward of 40 degrees (113 cases out of 301) have zonal distance measurements that exceed 2000 km ($\approx$ 24 degrees longitude) over the detected block's lifetime. Some of the larger zonal distance values for $PV^*$ can be attributed to the fact that, under certain meteorological conditions (see Section \ref{shearvort}), $PV^*$ detects gridpoints that are upstream relative to those detected by the other methods, meaning that the longitude coordinate of the cluster centroid is correspondingly shifted as well.
+%Table \ref{dist} shows that, with the exception of NH summer, $AGP$-detected regions move the least zonal distance over time; regions detected by $Z^*$ have a range of values that is up to 50\% higher than the $AGP$ values and $PV^*$ values are greater still (up to twice as large as the values of the $AGP$ interquartile ranges), despite smaller  interquartile ranges for duration. The large values in NH summer for $AGP$ can be somewhat attributed to low-latitude blocks; 38\% of $AGP$-detected regions that are equatorward of 40 degrees (113 cases out of 301) have zonal distance measurements that exceed 2000 km ($\approx$ 24 degrees longitude) over the detected block's lifetime. Some of the larger zonal distance values for $PV^*$ can be attributed to the fact that, under certain meteorological conditions (see Section \ref{shearvort}), $PV^*$ detects gridpoints that are upstream relative to those detected by the other methods, meaning that the longitude coordinate of the cluster centroid is correspondingly shifted as well.
 %{\color{teal}R2: I struggle to see how the fact that PV* tends to identify the blocking further upstream implies that the distance travelled will be larger according two PV* as well. Please try to explain more clearly.}
 %The resultant zonal distance between the start and end longitude coordinates can be hundreds of km greater than that of $Z^*$ or $AGP$, even if the three methods are tracking the same feature. Another factor involves $PV^*$-detected clusters that are embedded in regions of relatively unimpaired flow--- this is particularly prevalent at lower latitudes (see Section \ref{lowlatsec}).
 
@@ -420,11 +420,11 @@ Overall, the $PV^*$ method has distributions of duration values with the smalles
 % \end{table}
 
 \paragraph{Block zonal speed:} As with zonal distance, it is difficult to compare these results to previous studies, but \cite{sinclair_climatology_1996}, which tracks anticyclones in the SH, used a criterion of 3000 km in 5 days (or 25 km/hr) as a threshold for limiting tracking to slower-moving features. This threshold was in terms of 2D distance, rather than zonal distance as presented here, but assuming that the trajectory is mainly zonal with slight latitudinal variation, an estimate of 25 km/hr is a reasonable estimate for an upper bound. 
+{\color{blue}
+Speed values, as shown in Figure \ref{shspeed}, tend to follow a similar pattern to distance values, with $AGP<Z^*<PV^*$ and faster speeds in the SH than the NH. $AGP$ had the lowest speeds due to smaller distance values, while $Z^*$ had longer distance values but correspondingly longer duration values; there are no statistically significant differences between $AGP$ and $Z^*$ in the NH. $PV^*$-detected regions have the largest zonal speed values due to the combination of shorter duration and longer zonal distance, particularly in the SH; the 25 km/hr benchmark from Sinclair is exceeded more often by $PV^*$-detected regions than other methods.}
 
-Speed values, as shown in Figure \ref{shspeed}, tend to follow a similar pattern to distance values, with $AGP<Z^*<PV^*$ and faster speeds in the SH than the NH. $AGP$ had the lowest speeds due to smaller distance values, while $Z^*$ had longer distance values but correspondingly longer duration values; there are no statistically significant differences between $AGP$ and $Z^*$ in the NH. $PV^*$ detected regions have the largest zonal speed values due to the combination of shorter duration and longer zonal distance, particularly in the SH; the 25 km/hr benchmark from Sinclair is exceeded more often by $PV^*$ detected regions than other methods.
 
-
-%When the speeds, shown in Table \ref{shspeed}, are calculated (as described in Appendix \ref{stitchdesc}), the 75th percentile values of the block speeds are overall higher in the SH, which is likely associated with the stronger zonal flow in the SH. $AGP$ detected regions have the lowest speeds (mainly due to shorter zonal distances), and while $Z^*$ detected regions had larger zonal distances, they had correspondingly larger duration values as well, which leads to a range of speeds that is in between $AGP$ and $PV^*$. $PV^*$ detected regions have the largest zonal speed values due to the combination of shorter duration and longer zonal distance, particularly in the SH; the range of values are upwards of 50\% larger those from other methods, and the 25 km/hr benchmark from Sinclair is exceeded more often by $PV^*$ detected regions than the other methods. 
+%When the speeds, shown in Table \ref{shspeed}, are calculated (as described in Appendix \ref{stitchdesc}), the 75th percentile values of the block speeds are overall higher in the SH, which is likely associated with the stronger zonal flow in the SH. $AGP$-detected regions have the lowest speeds (mainly due to shorter zonal distances), and while $Z^*$-detected regions had larger zonal distances, they had correspondingly larger duration values as well, which leads to a range of speeds that is in between $AGP$ and $PV^*$. $PV^*$-detected regions have the largest zonal speed values due to the combination of shorter duration and longer zonal distance, particularly in the SH; the range of values are upwards of 50\% larger those from other methods, and the 25 km/hr benchmark from Sinclair is exceeded more often by $PV^*$-detected regions than the other methods. 
 
 \begin{figure}
     \centering
@@ -452,7 +452,7 @@ Speed values, as shown in Figure \ref{shspeed}, tend to follow a similar pattern
 
 % \end{table}
 
-\paragraph{Block size:} \cite{croci-maspoli_multifaceted_2007}, which uses S04 (but without the size threshold as defined here), presents results in which detected regions in the NH range from 0.5 to $4\times 10^6$ km$^2$; Figure \ref{size} displays the range of block sizes for each method here. It is worth noting that this is the one metric where every possible combination of methods, seasons, and regions displayed significant differences between distributions of values. The interquartile ranges for $AGP$ and $PV^*$ are largely in agreement with this finding (although there are a substantial amount of outliers for $AGP$), while those of $Z^*$ tend to have interquartile ranges that are larger. Size is an important consideration here because it can determine whether or not a detected region is rejected due to the threshold constraint. When a blocked feature is detected by both the $PV^*$ and $Z^*$ methods, the larger $Z^*$ contour will frequently both appear earlier and persist longer than the smaller $PV^*$ contour (this is seen in Figure \ref{lowlatdjf}). This is not an artifact of the threshold magnitude, as altering the magnitude of the threshold did not significantly impact the distribution of block size; $PV^*$ blocks on average will be smaller than their $Z^*$ counterparts.
+\paragraph{Block size:} {\color{blue}It is worth noting that this is the one metric where every possible combination of methods, seasons, and regions displayed significant differences between distributions of values.} \cite{croci-maspoli_multifaceted_2007}, which uses S04 (but without the size threshold as defined here), presents results in which detected regions in the NH range from 0.5 to $4\times 10^6$ km$^2$; Figure \ref{size} displays the range of block sizes for each method here. The interquartile ranges for $AGP$ and $PV^*$ are largely in agreement with this finding (although there are a substantial amount of outliers for $AGP$), while those of $Z^*$ tend to have interquartile ranges with larger size values. Size is an important consideration here because it can determine whether or not a detected region is rejected due to the threshold constraint. When a blocked feature is detected by both the $PV^*$ and $Z^*$ methods, the larger $Z^*$ contour will frequently both appear earlier and persist longer than the smaller $PV^*$ contour (this is seen in Figure \ref{lowlatdjf}). This is not an artifact of the threshold magnitude, as altering the magnitude of the threshold did not significantly impact the distribution of block size; $PV^*$ blocks on average will be smaller than their $Z^*$ counterparts.
 
 \subsection{Intercomparison of blocking algorithms}\label{intercompare}
 
@@ -463,7 +463,7 @@ Tables \ref{pearsontabcol}-\ref{simtabcol} provide a summary of the various co-o
 
 \begin{table}
 \centering
-\caption{Pearson correlation values between blocking frequencies of each region, as shown in Figure \ref{blockdens}. Magnitudes above (below) 0.7 (0.3) are bolded (italicized) to emphasize patterns of consistently high or low values. Negative values imply an inverse relationship between corresponding gridpoint values. Statistical significance is denoted by a ``*'' for $0.01<p<0.05$ and ``**'' for $p<<0.01$, Statistical significance for pattern correlation was established using permutation, as explained in Appendix \ref{signifappendix}. }
+\caption{Pearson correlation values between blocking frequencies of each region, as shown in Figure \ref{blockdens}.{\color{blue} Magnitudes above (below) 0.7 (0.3) are bolded (italicized) to emphasize patterns of consistently high or low values. Negative values imply an inverse relationship between corresponding gridpoint values. Statistical significance is denoted by a ``*'' for $0.01<p<0.05$ and ``**'' for $p<<0.01$, Statistical significance for pattern correlation was established using permutation, as explained in Appendix \ref{signifappendix}. }}
 \label{pearsontabcol}
 \subcaption{Northern Hemisphere}
 \begin{tabular}{|l|l|l|l|l|}
@@ -497,7 +497,7 @@ Tables \ref{pearsontabcol}-\ref{simtabcol} provide a summary of the various co-o
 \end{tabular}
 \end{table}
 
-\paragraph{Pearson pattern correlation:} The results in Table \ref{pearsontabcol} highlight the clear differences in blocking frequency that will arise given the choice of an anomaly versus a total field (discussed further in Section \ref{anominst}). Correlation between $AGP$ and the other methods is consistently negative in the summer hemispheres due to $AGP$ detecting blocks mainly at the lower latitudes, and NC DJF is the only instance of correlations values that are both non-negative and greater than 0.2. In comparison, $C(PV^*, Z^*)$ is almost always the strongest positive correlation value for a particular region or season (with the exception of $C(PV^*, AGP)$ in NC DJF), with particularly strong correlation values in SH summer, NA DJF, SI (both seasons) and NP (both seasons).
+\paragraph{Pearson pattern correlation:} The results in Table \ref{pearsontabcol} highlight the clear differences in blocking frequency that will arise given the choice of an anomaly versus a total field (discussed further in Section \ref{anominst}). {\color{blue}Correlation between $AGP$ and the other methods is consistently negative in the summer hemispheres due to $AGP$ detecting blocks mainly at the lower latitudes, and NC DJF is the only instance of correlations values that are both non-negative and greater than 0.2. }In comparison, $C(PV^*, Z^*)$ is almost always the strongest positive correlation value for a particular region or season (with the exception of $C(PV^*, AGP)$ in NC DJF), with particularly strong correlation values in SH summer, NA DJF, SI (both seasons) and NP (both seasons).
 
 %Since each of the methods was initially constructed using NH DJF data, it is unsurprising that these correlation values  between all variable pairs are moderate to high in this subset of data, but this does not hold for other regions. Generally, correlation values are lower in the respective summer hemispheres. $C(PV^*, Z^*)$ is strong ($>0.71$) in all regions and seasons, but (with the exception of $C(Z^*, AGP)$ in NA DJF and $C(PV^*, AGP)$ in NC DJF) correlation between $AGP$ and the anomaly methods is low (0.00-0.30) to moderate (0.31-0.70).  
 
@@ -561,16 +561,16 @@ Season & Method pair & Probability & NC    & NP    & NA      \\ \hline
 \end{tabular}
 \end{table}
 
-\paragraph{Probability of co-occurrence:} The interpretation of the values in Table \ref{probtabcol} must take the relative quantities of each method's detected features into account. For example, it was previously noted that $PV^*$ and $Z^*$ had similar averaged patterns, with some of the highest correlation values in Table \ref{pearsontabcol}; however, this does not mean that they are equally likely to predict one another. While $P(Z^*|PV^*)$ is consistently the highest value in a given region, the reverse is not true, since $Z^*$ also detects many other regions that do not coincide with $PV^*$ detected regions. Also, averaged agreement does not necessarily also mean instantaneous agreement; for example, $C(PV^*, AGP)$ is 0.62 in NC DJP but the probabilities of co-occurrence for these two methods are only about 30-38\%, while $C(PV^*, Z^*)$ is 0.49 in NC DJF but $P(Z^*|PV^*)=0.61$. In this instance, $PV^*$ and $AGP$ detect blocks in similar areas, but the methods are not simultaneously detecting the same features on a per-timestep basis. 
+\paragraph{Probability of co-occurrence:} The interpretation of the values in Table \ref{probtabcol} must take the relative quantities of each method's detected features into account. For example, it was previously noted that $PV^*$ and $Z^*$ had similar averaged patterns, with some of the highest correlation values in Table \ref{pearsontabcol}; however, this does not mean that they are equally likely to predict one another. While $P(Z^*|PV^*)$ is consistently the highest value in a given region, the reverse is not true, since $Z^*$ also detects many other regions that do not coincide with $PV^*$-detected regions. Also, averaged agreement does not necessarily also mean instantaneous agreement; for example, $C(PV^*, AGP)$ is 0.62 in NC DJP but the probabilities of co-occurrence for these two methods are only about 30-38\%, while $C(PV^*, Z^*)$ is 0.49 in NC DJF but $P(Z^*|PV^*)=0.61$. In this instance, $PV^*$ and $AGP$ detect blocks in similar areas, but the methods are not simultaneously detecting the same features on a per-timestep basis. 
 
-%Here, the interpretation of values in Table \ref{probtabcol} must take the relative quantities of each method's detected features into account. $P(Z^*|AGP)$ is high in SI and SA JJA mainly because of the small number of $AGP$ detected regions with respect to the large number of $Z^*$ detected regions, so $AGP$ is a very good predictor of $Z^*$ but the reverse is not true ($P(AGP|Z^*)$ is often less than 0.20).  Note that despite the fact that $C(PV^*,AGP)\approx C(Z^*,AGP)$ during JJA in SI  and SA, $P(PV^*|AGP)$ is not similarly high; regions detected by these two methods rarely coincide. 
+%Here, the interpretation of values in Table \ref{probtabcol} must take the relative quantities of each method's detected features into account. $P(Z^*|AGP)$ is high in SI and SA JJA mainly because of the small number of $AGP$-detected regions with respect to the large number of $Z^*$-detected regions, so $AGP$ is a very good predictor of $Z^*$ but the reverse is not true ($P(AGP|Z^*)$ is often less than 0.20).  Note that despite the fact that $C(PV^*,AGP)\approx C(Z^*,AGP)$ during JJA in SI  and SA, $P(PV^*|AGP)$ is not similarly high; regions detected by these two methods rarely coincide. 
 
 %When this information is combined with the correlation coefficients from the previous section, it again reinforces the point that the anomaly methods are in higher agreement than $AGP$ and the anomaly methods. Although there are two instances of high correlation between $AGP$ and the anomaly methods ($C(PV^*, AGP)$ in NC JJA and $C(Z^*, AGP)$ in NA DJF), the probability of co-occurrence between these methods is only low to moderate; this means that the averaged pattern might appear to be similar, but the methods are not simultaneously detecting the same features on a per-timestep basis. In contrast, the high values of $P(Z^*|PV^*)$, combined with the high values of $C(PV^*, Z^*)$ indicates that $PV^*$ and $Z^*$ are much more likely to detect the same features (but $PV^*$ will do so less often, given the lower blocking frequency).% {\color{blue}[MAR: another thing to add to conclusion]}
 
 \begin{table*}
 \centering
 
-\caption{ Interquartile ranges of spatial similarity between instantaneously blocked fields. The 25th and 75th percentile values are formatted based on the relative distributions of these values--- 25th percentile values above (below) 0.29 (0.15) are bolded (italicized), and 75th percentile values above (below) 0.54 (0.39) are bolded (italicized) to denote particularly high or low quantities relative to other values}
+\caption{ Interquartile ranges of spatial similarity between instantaneously blocked fields. {\color{blue}The 25th and 75th percentile values are formatted based on the relative distributions of these values--- 25th percentile values above (below) 0.29 (0.15) are bolded (italicized), and 75th percentile values above (below) 0.54 (0.39) are bolded (italicized) to denote particularly high or low quantities relative to other values}}
 \label{simtabcol}
 \subcaption{Northern Hemisphere}
 \begin{tabular}{|l|l|l|l|l|}
@@ -607,7 +607,7 @@ Season & Method pair & Probability & NC    & NP    & NA      \\ \hline
 \end{table*}
 
 
-\paragraph{Spatial similarity:} The third measure of agreement between methods, spatial similarity, is highly influenced by the size and location of detected regions relative to one another. Note that the largest 75th percentile value is 0.62, which is unsurprising given the differences in detected block size between methods even if the same feature is detected, as was seen in Figure \ref{RRRpanel}d.   The results in Table \ref{simtabcol} provide additional insight to the results from the previous two sections. While $PV^*$ and $Z^*$ again have some of the highest values for similarity relative to other combinations of methods, $S(PV^*,Z^*)$ rarely exceeds 0.6, and more often in the respective summer hemispheres when the $Z^*$ blocks are smaller. Additionally, $S(PV^*,AGP)<S(Z^*,AGP)$ in most instances; this is sometimes due to the relative sizes of the detected contours, but the $PV^*$ detected contour is also sometimes shifted with respect to the $Z500$-based methods (example in Section \ref{shearvort}).% {\color{blue}[MAR: another thing to add to conclusion]}
+\paragraph{Spatial similarity:} The third measure of agreement between methods, spatial similarity, is highly influenced by the size and location of detected regions relative to one another. Note that the largest 75th percentile value is 0.62, which is unsurprising given the differences in detected block size between methods even if the same feature is detected, as was seen in Figure \ref{RRRpanel}d.   The results in Table \ref{simtabcol} provide additional insight to the results from the previous two sections. While $PV^*$ and $Z^*$ again have some of the highest values for similarity relative to other combinations of methods, $S(PV^*,Z^*)$ rarely exceeds 0.6, and more often in the respective summer hemispheres when the $Z^*$ blocks are smaller. Additionally, $S(PV^*,AGP)<S(Z^*,AGP)$ in most instances; this is sometimes due to the relative sizes of the detected contours, but the $PV^*$-detected contour is also sometimes shifted with respect to the $Z500$-based methods (example in Section \ref{shearvort}).% {\color{blue}[MAR: another thing to add to conclusion]}
 
 
 
@@ -627,12 +627,12 @@ These points are illustrated in Figure \ref{zgdiff}, which shows a snapshot of a
 
 \subsection{$PV^*$ links to shear and vorticity}\label{shearvort}
 
-The $PV^*$ method picks out regions with PV that are highly anomalous with respect to the climatological mean in the upper troposphere. Most often, these regions are areas with particularly pronounced anticyclonic circulation in the $Z500$ field, such as dipoles or omega blocks. Since anomalous vorticity and anomalous highs are linked, the two anomaly methods are often very similar in terms of the location of the detected block, even if the size of the detected cluster of grid points is not always the same. However, the EPV field can be influenced by phenomena such as vertical shear (first two terms in Equation \ref{pveq}) or locally strong winds; it is a factor to consider in flow that does not have the necessary meridional component to satisfy points 1 and 2 of the AMS definition of blocking. For example, a jet streak embedded in otherwise zonal flow will lead to mistaken identification of a region as blocked even though there is neither persistent obstruction nor pronounced meridional flow. The $PV^*$ method tends to detect regions at higher latitudes than the other two methods during each respective hemisphere's summe; this corresponds roughly to the location of the 500 hPa jet, which shifts from polewards of 45 degrees latitude in summer to 40 degrees latitude and below in the wintertime. Therefore, the $PV^*$ method is somewhat linked to the presence of the jet stream and embedded jet streaks.
+The $PV^*$ method picks out regions with PV that are highly anomalous with respect to the climatological mean in the upper troposphere. Most often, these regions are areas with particularly pronounced anticyclonic circulation in the $Z500$ field, such as dipoles or omega blocks. Since anomalous vorticity and anomalous highs are linked, the two anomaly methods are often very similar in terms of the location of the detected block, even if the size of the detected cluster of grid points is not always the same. However, the EPV field can be influenced by phenomena such as vertical shear (first two terms in Equation \ref{pveq}) or locally strong winds; it is a factor to consider in flow that does not have the necessary meridional component to satisfy points 1 and 2 of the AMS definition of blocking. For example, a jet streak embedded in otherwise zonal flow will lead to mistaken identification of a region as blocked even though there is neither persistent obstruction nor pronounced meridional flow. {\color{blue}The $PV^*$ method tends to detect regions at higher latitudes than the other two methods during each respective hemisphere's summer, and over a wider range of latitudes in the winter; this corresponds roughly to the location of the 500 hPa jet, which shifts from polewards of 45 degrees latitude in summer to 40 degrees latitude and below in the wintertime. Therefore, the $PV^*$ method is somewhat linked to the presence of the jet stream and embedded jet streaks.}
 
 %the distribution of $PV^*$ zonal distances values has larger magnitudes than the other two methods (especially in the SH) because these detected regions are less stationary.
-%{\color{teal}R2:I am not following what is meant by ", and a more varied winter distribution, …" and all the way to the end of the paragraph.}
+{\color{teal}\sout{R2:I am not following what is meant by ", and a more varied winter distribution, …" and all the way to the end of the paragraph.}}
 
-Figure \ref{pvdiff} demonstrates a case in which a $PV^*$ detected cluster is shifted relative to clusters detected by the other two methods, despite all of the methods identifying the same block. The 4-panel figure shows an omega block that is detected by all three methods in 1989 NA SON; however, in Figure \ref{pvdiff}a, the $Z^*$ and $AGP$ contours both center on the high that is the top half of the block ($S(Z^*, AGP)=0.56$), while the $PV^*$ contour is shifted westwards ($S(PV^*, Z^*)=0.29$, $S(PV^*, AGP)=0.18$). Daily composites of the corresponding total wind (Figure \ref{windfield}) show that, on September 28th 6Z, 1989 (Figure \ref{windfield}a), there was a jet streak on the upstream side of the high pressure feature which is being detected by the three algorithms. The vorticity ($-g\zeta \frac{\partial \theta}{\partial p}$ in Equation \ref{pveq}) associated with the anticyclonic curvature of the high is strongly negative at this time, and further enhanced by vertical shear in the jet streak region. The combination of these factors leads to the westward extension of the $PV^*$ detected cluster relative to the other two clusters. As time progresses (Figure \ref{windfield}b), a portion of the  $PV^*$ detected contour continues to track that jet streak, which coincides with strongly negative vorticity, until it reaches the downstream side of the omega block (Figure \ref{windfield}c). The next jet streak, seen in Figure \ref{windfield}d, is at a higher latitude, where $\overline{PV}$ is larger and there is positive vorticity associated with the low. The anomaly is no longer exceeding the threshold; therefore, the $PV^*$ cluster separates from the jet streak and is in better agreement with the other two methods ($S(PV^*, Z^*)=0.52$, $S(PV^*, AGP)=0.54$). 
+Figure \ref{pvdiff} demonstrates a case in which a $PV^*$-detected cluster is shifted relative to clusters detected by the other two methods, despite all of the methods identifying the same block. The 4-panel figure shows an omega block that is detected by all three methods in 1989 NA SON; however, in Figure \ref{pvdiff}a, the $Z^*$ and $AGP$ contours both center on the high that is the top half of the block ($S(Z^*, AGP)=0.56$), while the $PV^*$ contour is shifted westwards ($S(PV^*, Z^*)=0.29$, $S(PV^*, AGP)=0.18$). Daily composites of the corresponding total wind (Figure \ref{windfield}) show that, on September 28th 6Z, 1989 (Figure \ref{windfield}a), there was a jet streak on the upstream side of the high pressure feature which is being detected by the three algorithms. The vorticity ($-g\zeta \frac{\partial \theta}{\partial p}$ in Equation \ref{pveq}) associated with the anticyclonic curvature of the high is strongly negative at this time, and further enhanced by vertical shear in the jet streak region. The combination of these factors leads to the westward extension of the $PV^*$-detected cluster relative to the other two clusters. As time progresses (Figure \ref{windfield}b), a portion of the  $PV^*$-detected contour continues to track that jet streak, which coincides with strongly negative vorticity, until it reaches the downstream side of the omega block (Figure \ref{windfield}c). In Figure \ref{windfield}d, the next jet streak has reached a higher latitude, where $\overline{PV}$ is larger and there is positive vorticity associated with the low. The anomaly is no longer exceeding the threshold; therefore, the $PV^*$ cluster separates from the jet streak and is in better agreement with the other two methods ($S(PV^*, Z^*)=0.52$, $S(PV^*, AGP)=0.54$). 
 
 \subsection{Low-latitude blocking and flow impairment}\label{lowlatsec}
 
@@ -640,11 +640,11 @@ Low-latitude blocking with respect to NH summer and the $AGP$ method is discusse
 {\color{teal}R2: "this paper" - avoid the pronoun here, because it is actually unclear which paper this refers to - Davini et al. or Pinheiro et al.}
 {\color{blue}\sout{the authors of this paper question}This paper questions} whether these features are correctly characterized as blocks, since they are linked to poleward displacement of subtropical easterlies and are less intense and persistent than those at higher latitudes. Low-latitude blocking is present in all three methods: the $AGP$ method has relative maxima in the averaged blocking patterns in the respective summer hemispheres, and the $PV^*$ and $Z^*$ methods find low-latitude blocks in the respective winter hemispheres, particularly in NP DJF. Many of these low-latitude features are nearly stationary (block speed averages 2-12 km/hr in both hemispheres) and persistent (block duration averages 6-12 days in both hemispheres). However, they do not always impair the zonal flow as required by the first point in the AMS definition.
 
-Figure \ref{lowlatjja} shows an example of one of the more stationary low-latitude $AGP$ blocks in JJA, a persistent ridge over the central United States in 1994 that lasted from August 23rd 12Z to August 30th 0Z and had an average zonal speed of 0.74 km/hr over 7.75 days. Averaged over the detected block's lifespan, the 850 hPa temperature anomaly ($T_a$) in the vicinity of the detected block is approximately +4K,the 500 hPa meridional wind anomaly ($v_a$) is approximately $\pm5$ m/s on either side of the block (largely due to the , and the 500 hPa zonal wind anomaly ($u_a$) is up to -5 m/s in the blocked flow region (see Figure \ref{avgjja}). 
+Figure \ref{lowlatjja} shows an example of one of the more stationary low-latitude $AGP$-detected blocks in JJA, a persistent ridge over the central United States in 1994 that lasted from August 23rd 12Z to August 30th 0Z and had an average zonal speed of 0.74 km/hr over 7.75 days. The other two methods did not detect this feature, although the $PV^*$ method detected a second feature at the higher latitudes of Figures \ref{lowlatjja}b-d. Averaged over the detected block's lifespan, the 850 hPa temperature anomaly ($T_a$) in the vicinity of the detected block is approximately +4K,the 500 hPa meridional wind anomaly ($v_a$) is approximately $\pm5$ m/s on either side of the block, and the 500 hPa zonal wind anomaly ($u_a$) is up to -5 m/s in the blocked flow region (see Figure \ref{avgjja}). 
 
-In contrast, Figure \ref{lowlatdjf} shows a low-latitude case in NP DJF in which two methods identify a block in the midst of flow that is not sufficiently diverted or slowed. This example shows January 5th 0Z to January 11th 0Z, 2006, where both the $Z^*$ and $PV^*$ methods detected a relatively shallow ridge that evolves into mostly zonal flow by the end of the detected block's lifespan. The $PV^*$ detected region has an average zonal speed of 6.98 km/hr over 6 days and the $Z^*$ detected region has an average zonal speed of 10.91 over 11.5 days (the difference is mainly due to the longer lifespan of the $Z^*$ detected region). $u_a$ is -16 m/s in bottom half of the blocked flow region outlined in Figure \ref{avgdjf}, but northwards of 35N, $u_a$ has a maximum magnitude of 20 m/s. $v_a$ is $\pm 10$ m/s on either side of the block and $T_a$ is +5K within the blocked region, both of which are larger anomalies than the JJA case. However, one must always approach anomalies with caution; the Z500 field in Figure \ref{lowlatdjf} does not indicate that the zonal flow has been reduced at later times. Indeed, composites of the total wind fields in Figure \ref{totwind} show that while the JJA case has reduced wind speeds (maximum 5 m/s in the blocked region, compared to 20 m/s outside the impaired region), the DJF case has wind speeds of up to 35 m/s in the northern portion of the ``blocked'' region, which also coincides with the positive $u_a$ value in the northern half of the outlined region in Figure \ref{avgdjf}. In the case of $Z^*$, this mistaken identification can be attributed to a fairly shallow ridge in an area with a strong meridional gradient (as in Section \ref{anominst}). In the case of $PV^*$, vorticity values were only slightly negative or close to 0, but when considering $VPV$ compared to $\overline{VPV}$, sufficiently anomalous for $VPV^*$ to surpass the local threshold value of 1.2 PVU.
+In contrast, Figure \ref{lowlatdjf} shows a low-latitude case in NP DJF in which two methods identify a block in the midst of flow that is not sufficiently diverted or slowed. This example shows January 5th 0Z to January 11th 0Z, 2006, where both the $Z^*$ and $PV^*$ methods detected a relatively shallow ridge that evolves into mostly zonal flow by the end of the detected block's lifespan, although the $AGP$ method detects the ridging at the lower edge of the study region during the last few days (Figures \ref{lowlatdjf}c and d) and the $PV^*$ method disappears in Figure \ref{lowlatdjf}d. The $PV^*$-detected region has an average zonal speed of 13 km/hr over 8 days and the $Z^*$-detected region has an average zonal speed of 10 km/hr over 12.5 days (the difference is mainly due to the longer lifespan of the $Z^*$-detected region). $u_a$ is -16 m/s in bottom half of the blocked flow region outlined in Figure \ref{avgdjf}, but northwards of 35N, $u_a$ has a maximum magnitude of 20 m/s. $v_a$ is $\pm 10$ m/s on either side of the block and $T_a$ is +5K within the blocked region, both of which are larger anomalies than the JJA case. However, one must always approach anomalies with caution; the Z500 field in Figure \ref{lowlatdjf} does not indicate that the zonal flow has been reduced at later times. Indeed, composites of the total wind fields in Figure \ref{totwind} show that while the JJA case has reduced wind speeds (maximum 5 m/s in the blocked region, compared to 20 m/s outside the impaired region), the DJF case has wind speeds of up to 35 m/s in the northern portion of the ``blocked'' region, which also coincides with the positive $u_a$ value in the northern half of the outlined region in Figure \ref{avgdjf}. In the case of $Z^*$, this mistaken identification can be attributed to a fairly shallow ridge in an area with a strong meridional gradient (as in Section \ref{anominst}). In the case of $PV^*$, vorticity values were only slightly negative or close to 0, but when considering $VPV$ compared to $\overline{VPV}$, sufficiently anomalous for $VPV^*$ to surpass the local threshold value of 1.2 PVU.
 
-These examples suggest that not all low-latitude blocking should be discounted, at least according to certain metrics; thus, applying blocking algorithms over a range of latitudes rather than a single central latitude will produce a more complete climatology of blocking hotspots. A number of detected low-latitude blocks will fail to meet the AMS blocking criteria, as seen in the second example. However, algorithm ``failures'' are not unique to the lower latitudes; therefore, rather than restricting analysis to a limited range of latitudes, future research should consider algorithm limitations, which have been mentioned in previous sections, and make use of additional diagnostic metrics to filter out non-blocked flow.
+These examples suggest that not all low-latitude blocking should be discounted, at least according to certain metrics; thus, applying blocking algorithms over a range of latitudes rather than a single central latitude will produce a more complete climatology of blocking hotspots. A number of detected low-latitude blocks will fail to meet the AMS flow diversion criteria, as seen in the second example. However, algorithm ``failures'' are not unique to the lower latitudes; therefore, rather than restricting analysis to a limited range of latitudes, future research should consider algorithm limitations, which have been mentioned in previous sections, and make use of additional diagnostic metrics to filter out non-blocked flow.
 
 \section{Conclusions}\label{concsec}
 
@@ -661,6 +661,7 @@ These examples suggest that not all low-latitude blocking should be discounted, 
 & Strong poleward $Z500$ gradient
 & Strong $Z500$ meridional gradient
 & Strong winds, vertical shear\\
+&Subtropical high pressure&&\\
 &&&\\
 \textbf{Favored block types }
 & Omega block or ridge with meridional axis tilt
@@ -671,32 +672,32 @@ These examples suggest that not all low-latitude blocking should be discounted, 
 & \\
 &&&\\
 \textbf{Spatial distribution of frequency }
-& NH: Higher latitudes (exception of JJA low-latitude blocking), Atlantic Ocean basin (and some East Pacific)
+& NH: Higher latitudes, Atlantic Ocean basin (and some East Pacific), summer low latitudes
 & blocks detected over full range of study regions
 & Higher latitudes in summer seasons, wider range of latitudes in winter seasons\\
-& SH: blocking mostly in SP
+& SH: summer low latitudes, SP midlatitudes
 &
 & \\
 &&&\\
 \textbf{Location (frequency)  of maximum }
-& NH JJA equatorwards of 45 degrees (25\%)
-& NP DJF equatorwards of 45 degrees (21\%)
-& NP DJF equatorwards of 45 degrees (12\%) \\
+& NH JJA equatorwards of 45 degrees (40\%)
+& NP DJF equatorwards of 45 degrees (19\%)
+& NP DJF equatorwards of 45 degrees (9\%) \\
 &&&\\
 \textbf{Notable features}
-& Less similar to other two methods
+& Less similar to other two methods, highest frequency of low-latitude blocking
 & Highest frequency of SH blocking
 & Lowest overall frequency magnitude between methods\\
 &&&\\
 \textbf{Duration }
-& Longest between methods in NH summer ($6-11.5$ days), $\approx 5.5-10.5$ days otherwise
-& Shortest between methods in NH summer ($5.5-7.5$ days), longest otherwise ($\approx 6-14.5$ days)
-& Shortest overall between methods (5.5-9.5 days) \\
+& Longest between methods in summer ($7.25-15$ days), $\approx 6.5-10$ days otherwise
+& Longest between methods in winter ($6.75-12$ days), $\approx 6.5-11$ days otherwise
+& Shortest overall between methods ($\approx6.25-9$ days) \\
 &&&\\
 \textbf{Zonal distance traveled}
-& Shortest overall between methods ($\approx 400-2400$ km)
-& $\approx 500-3700$ km
-& Longest overall between methods ($\approx 800-4300$ km)\\
+& Longest in NH summer ($\approx 600-2900$ km), shortest ($\approx 600-2500$ km) otherwise 
+& shortest in NH summer ($\approx 450-1900$ km), $\approx 800-3100$ km otherwise
+& Longest ($\approx 1200-3700$ km) with exception of NH summer ($\approx 600-2100$ km)\\
 &&&\\
 \textbf{Zonal speed}
 & Slowest overall between methods ($\approx 2-13$ km/hr)
@@ -1030,6 +1031,100 @@ In order to verify that the probabilities would not significantly change with th
 \includegraphics[width=0.37\textwidth]{fig14b}
 \caption{500 hPa total wind fields and vectors for (a) the JJA blocking case in Figure \ref{lowlatjja} and (b) the DJF blocking case in Figure \ref{lowlatdjf}. The vectors indicate the wind direction, and the colors indicate the wind magnitude.}\label{totwind}
 \end{figure*}
+
+\begin{table}[b]
+    \caption{Duration}
+    \centering
+        \subcaption{Northern Hemisphere}
+    \begin{tabular}{c|c|c|c|c}
+season&variable & NC & NP & NA \\ 
+  \hline
+JJA & AGP&6.75 to 10.75 & 7.25 to 20.50 & 7.25 to 18.00 \\ 
+&Z & 6.50 to 9.94 & 7.25 to 12.56 & 6.75 to 11.75 \\ &PV& 6.12 to 7.50 & 6.50 to 9.38 & 6.25 to 8.75 \\ 
+\hline
+  DJF & AGP&6.50 to 9.50 & 6.75 to 11.00 & 7.00 to 13.25 \\ 
+    &Z & 6.75 to 11.50 & 7.50 to 14.44 & 7.00 to 13.00 \\ 
+    &PV& 6.25 to 9.00 & 6.75 to 11.06 & 6.50 to 9.62 \\ 
+    \end{tabular}
+    \subcaption{Southern Hemisphere}
+        \begin{tabular}{c|c|c|c|c}
+season&variable &  SI & SP & SA \\ 
+  \hline
+DJF & AGP& 7.25 to 15.00 & 6.75 to 14.25 & 8.31 to 19.50 \\ 
+&Z & 6.75 to 11.06 & 6.50 to 11.00 & 7.00 to 11.62 \\ 
+&PV & 6.25 to 9.00 & 6.50 to 10.25 & 6.50 to 8.75 \\ 
+\hline
+  JJA & AGP & 6.25 to 8.75 & 6.25 to 9.25 & 6.25 to 8.00 \\
+    &Z & 6.75 to 10.75 & 6.75 to 11.50 & 6.50 to 10.00 \\ 
+    &PV& 6.25 to 9.25 & 6.25 to 9.25 & 6.25 to 8.00 \\ 
+    \end{tabular}
+
+    \label{tab:duration}
+\end{table}
+
+\begin{table}[b]
+    \caption{distance}
+    \centering
+        \subcaption{Northern Hemisphere}
+    \begin{tabular}{c|c|c|c|c}
+season&variable & NC & NP & NA \\ 
+  \hline
+JJA & AGP& 438.78 to 2023.67 & 515.20 to 2928.51 & 873.65 to 3580.93 \\
+&Z & 337.18 to 1407.76 & 513.92 to 2125.20 & 516.80 to 2339.76 \\
+&PV & 348.84 to 1744.91 & 580.79 to 1935.02 & 914.42 to 2730.36 \\
+\hline
+  DJF & AGP & 376.06 to 1498.22 & 597.07 to 2020.71 & 949.09 to 3117.82 \\ 
+    &Z & 439.71 to 2094.31 & 799.79 to 3215.62 & 753.02 to 2874.73 \\ 
+    &PV& 1012.64 to 2782.57 & 940.65 to 3587.66 & 1233.75 to 3717.12 \\
+    \end{tabular}
+    \subcaption{Southern Hemisphere}
+        \begin{tabular}{c|c|c|c|c}
+season&variable & NC & NP & NA \\ 
+  \hline
+DJF & AGP & 801.24 to 4628.21 & 585.00 to 2904.78 & 1023.26 to 3506.67 \\ 
+&Z & 1193.95 to 3306.88 & 609.72 to 2486.01 & 795.99 to 3493.38 \\ 
+&PV& 1530.81 to 3968.65 & 1196.88 to 3029.67 & 1731.41 to 3800.90 \\ 
+\hline
+  JJA & AGP & 887.73 to 2374.28 & 610.87 to 2272.17 & 741.61 to 3689.44 \\
+    &Z & 1565.51 to 3820.86 & 1002.69 to 3294.64 & 1291.91 to 3379.13 \\  
+    &PV& 1657.57 to 4255.64 & 2117.51 to 4132.93 & 1994.70 to 3554.96 \\ 
+    \end{tabular}
+    \label{tab:duration}
+\end{table}
+
+
+\begin{table}[b]
+    \caption{speed}
+    \centering
+        \subcaption{Northern Hemisphere}
+    \begin{tabular}{c|c|c|c|c}
+season&variable & NC & NP & NA \\ 
+  \hline
+JJA & AGP& 2.06 to 9.01 & 1.88 to 9.18 & 3.26 to 12.35 \\ 
+&Z & 1.86 to 6.83 & 2.37 to 7.70 & 2.64 to 10.13 \\ 
+&PV & 2.13 to 10.17 & 3.05 to 10.05 & 4.86 to 15.94 \\ 
+\hline
+  DJF & AGP & 1.96 to 7.35 & 2.84 to 9.62 & 3.98 to 12.07 \\ 
+    &Z & 2.22 to 11.13 & 2.99 to 11.91 & 3.28 to 11.22 \\
+    &PV & 5.42 to 14.17 & 4.38 to 17.50 & 6.64 to 19.64 \\ 
+    \end{tabular}
+    \subcaption{Southern Hemisphere}
+        \begin{tabular}{c|c|c|c|c}
+season&variable & NC & NP & NA \\ 
+  \hline
+DJF & AGP & 2.83 to 15.27 & 2.27 to 12.05 & 3.40 to 10.86 \\  
+&Z  & 5.34 to 16.09 & 3.46 to 12.43 & 4.45 to 15.59 \\  
+&PV& 7.65 to 21.66 & 5.69 to 15.34 & 8.59 to 20.05 \\  
+\hline
+  JJA & AGP & 5.02 to 14.74 & 3.51 to 11.07 & 3.86 to 19.26 \\ 
+    &Z & 6.86 to 19.27 & 4.51 to 13.91 & 6.72 to 16.70 \\ 
+    &PV& 9.65 to 25.15 & 11.57 to 21.77 & 11.96 to 21.76 \\ 
+    \end{tabular}
+    \label{tab:duration}
+\end{table}
+
+
+
 
 
 \end{document}

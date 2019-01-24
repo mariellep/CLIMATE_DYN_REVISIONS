@@ -896,14 +896,14 @@ This methodology was similar to the permutation test, although the end calculati
 
 For each pair of overlapping blocks, for the set of all nonzero gridpoint coordinates $G$ in both $F1$ and $F2$, the following is repeated 100 times:
 \begin{enumerate}
-    \item determine the number of blocked grid points in $F1$ and $F2$, $nF1$ and $nF2$
-    \item set all $F1[G]$ and $F2[G]$ to 0
-    \item randomly reassign $nF1$ grid points in $F1[G]$ a value of 1 to create $S1$; randomly reassign $nF2$ grid points in $F2[G]$ a value of 1 to create $S2$
-    \item calculate $S(S1,S2)$ and store the new value.
+    \item Determine the number of blocked grid points in $F1$ and $F2$, $nF1$ and $nF2$.
+    \item Set all $F1[G]$ and $F2[G]$ to 0.
+    \item Randomly reassign $nF1$ grid points in $F1[G]$ a value of 1 to create $S1$; randomly reassign $nF2$ grid points in $F2[G]$ a value of 1 to create $S2$.
+    \item Calculate $S(S1,S2)$ and store the new value.
 \end{enumerate}
 
-The result is two distributions; the distribution of calculated similarity values, $S$, and the distribution of the sampled similarity values, $\widetilde{S}$. The p-value is 
-
+The result is two distributions; the distribution of calculated similarity values, $S$, and the distribution of the sampled similarity values, $\widetilde{S}$. The difference between the two distributions is established using the Wilcoxon test (\texttt{wilcox.test} in R), which returns the p-value.
+\vfill
 
 
 \end{appendices}
